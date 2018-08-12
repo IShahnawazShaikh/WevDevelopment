@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onClik</title>\
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+	*{
+
+	 	 margin: 0px;
+	 	 padding: 0px;
+	}
+	.main{
+    height: 800px;
+    width: 924px;
+    position: relative;
+    display: inline-block;
+    background-color: black;
+    float: left;
+    padding: 200px;
+}
+	 
+	  .box{
+	  	border: 2px solid black;
+	  	height: 200px;
+	  	width: 300px;
+	  	background-color: skyblue;
+	  	position: relative;
+	  	display: inline-block;
+	  	text-align: center;
+	  	float: left;
+
+	  }
+	  p{
+	  	  box-sizing: border-box;
+	  	  margin: 60px;
+	  	font-size:12px;
+	  	color: red;
+	  }
+	   h3{
+	   	      box-sizing: border-box;
+	   	      margin: 30px;
+              color:black;
+	   }
+	  button{
+
+	  	color: black;
+	  	background-color: yellow;
+	  }
+	</style>
+	<script type="text/javascript">
+      
+        $(document).ready(function(){
+              
+           $('.button1').on('click',function(){
+                  var location=$('<p> Maulana Mohammad Ali Jauhar Marg, Jamia Nagar, New Delhi, Delhi 110025</p>');
+                  $(this).after(location);
+                  $(this).remove();
+           });
+            $('.button2').on('click',function(){
+                  var location=$('<p>Aligarh, Uttar Pradesh 202001</p>');
+                  $(this).after(location);
+                  $(this).remove();
+           });
+             $('.button3').on('click',function(){
+                  var location=$('<p>Benito Juarez Rd, South Campus, South Moti Bagh, South Campus, South Moti Bagh, New Delhi, Delhi 110021</p>');
+                  $(this).after(location);
+                  $(this).remove();
+           });
+
+        });	
+
+	</script>
+</head>
+<body>
+ <div class="main">
+   <div class="box">
+   	  <h3>Jami Millia Islamia</h3>
+      <button class="button1">GetLocation</button>
+   </div>
+   <div class="box">
+   	  <h3>Aligarh Muslim University</h3>
+    <button class="button2">GetLocation</button>
+   </div>
+   <div class="box">
+   	  <h3>Delhi University</h3>
+    <button class="button3">GetLocation</button>
+   </div>
+</div>
+</body>
+</html>
