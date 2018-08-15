@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		 $(document).ready(function(){
+		 	// $(".main p:first").text("shahnawaz")
+		 		// $(".main").find("p:first").text("shahnawaz")
+		 			$(".main").find("p").first().text("shahnawaz")
+		 	        $(".main2").find("ul>li").first().text("Kanoon")
+		 	        // $(".main2").find("ul").children("li").first().text("Kanoon")
+		 	        $(".main2").find("ul").children("li").first().next().next().text("Kanoon2")
+		 	         $(".main2").find("ul").children("li").last().prev().text("Kanoon3")
+		 	         var add1=$("<p>Add at last using append()</p>")
+		 	         var add2=$("<p>add at first using prepend()</p>")
+		 	         $(".addingTags").append(add1);
+		 	         $(".addingTags").prepend(add2);
+		 	         var addsibling=$("<h1>Pasha before</h1>")
+		 	         var addsibling1=$("<h1>Pasha after</h1>")
+		 	         $(".addingTags").before(addsibling);
+		 	         $(".addingTags").after(addsibling1);
+		 })
+	</script>
+</head>
+<body>
+	<div class="main">
+     <p>Hello1</p>
+     <p>Hello2</p>
+     <p>Hello3</p>
+     <p>Hello4</p>
+   </div>
+   <div class="main2">
+    <ul>
+    	 <li>Home</li>
+    	 <li>About</li>
+    	 <li>Portfolio</li>
+    	 <li>contact</li>
+    	  <li>Service</li>
+    </ul>
+   </div>
+  <div class="addingTags">
+  	   <span>Irfan</span>
+  	   <span>shahbaz</span>
+  </div>
+  <div>
+  	Pasha2
+  </div>
+</body>
+</html>
