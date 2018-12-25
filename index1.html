@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function myfunc() {
+			var a = prompt("enter n1");
+			var b = prompt('enter n2');
+			var c = prompt('enter n3');
+			var url = 'sum1.php?a='+b+'&b='+c+'';
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function () {
+				if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+					alert(xmlhttp.responseText);
+				}
+			}
+			xmlhttp.open('GET',url,true);
+			xmlhttp.send();
+	    }	
+	</script>
+</head>
+<body>
+<button onclick="myfunc();">click here(for addition subtractio and Multiplication</button>
+</body>
+</html>
